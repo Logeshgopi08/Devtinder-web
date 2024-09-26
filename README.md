@@ -1,8 +1,14 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+# Dev Tinder-Frontend
+  -Create a vite + react app
+  -intiliaze with git repository
+  -install npm 
+  -install tailwind css
+  -install daisy ui lib
+  -install react-router
+  -Create browser router 
+  -Create Login and profile page and render into body component
+  -Create Footer Component and render into Body
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+

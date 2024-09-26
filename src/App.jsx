@@ -1,12 +1,20 @@
-// import './App.css'
-
-import Navbar from "./Components/Navbar";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Body from "./Components/Body";
+import Login from "./Components/Login";
+import Profile from "./Components/Profile";
 
 function App() {
   return (
     <>
-      <Navbar/>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+    <BrowserRouter basename="/">
+    <Routes>
+      <Route path="/" element ={<Body/>}>
+      <Route path="/login" element ={<Login/>}/>
+      <Route path="/profile" element ={<Profile/>}/>
+      </Route>
+    </Routes>
+    </BrowserRouter>
+      
     </>
   );
 }
