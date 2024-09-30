@@ -7,8 +7,8 @@ import { BASE_URL } from "../utlis/constant";
 
 const Login = () => {
 
-    const [emailID,seEmailId ]= useState("janani@gmail.com");
-    const [password,setPassword] = useState("Janani@003");
+    const [emailID,seEmailId ]= useState("");
+    const [password,setPassword] = useState("");
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
