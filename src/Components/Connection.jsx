@@ -28,6 +28,12 @@ const Connection = ()=>{
         fetchConnectionData();
     },[]);
 
+    if(!connectionData) return null;
+
+    if(connectionData.length <=0){
+        return <div>No Connection yet</div>
+    }
+
     return (
         <div>
            {connectionData.map((r)=>{
