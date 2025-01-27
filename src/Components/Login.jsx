@@ -10,7 +10,7 @@ const Login = () => {
   
   const [firstName,setFirstName ]= useState("");
   const [lastName,setLastName] = useState("");
-    const [emailID,seEmailId ]= useState("");
+    const [emailId,seEmailId ]= useState("");
     const [password,setPassword] = useState("");
     const [isLogin,setIsLogin] = useState(true);
     const dispatch = useDispatch();
@@ -23,7 +23,7 @@ const Login = () => {
         const res = await axios.post(BASE_URL+"/signup",{
           firstName,
           lastName,
-          emailID,
+          emailId,
           password
         },{withCredentials:true});
 
@@ -39,7 +39,9 @@ const Login = () => {
 
     const handleLogin =async()=>{
        try {
-           const res = await axios.post(BASE_URL+"/login",{emailID,password},
+        console.log("Login clicked");
+        
+           const res = await axios.post("http://localhost:8100/login",{emailId,password},
             {withCredentials:true}
            );
           //  console.log(res.data);
@@ -68,7 +70,7 @@ const Login = () => {
            <input type="text" value={lastName} onChange={(e)=>setLastName(e.target.value)}
            placeholder="Last Name " className="input input-bordered w-full max-w-xs my-2" />
            </div>)}
-          <input type="text" value={emailID} onChange={(e)=>seEmailId(e.target.value)}
+          <input type="text" value={emailId} onChange={(e)=>seEmailId(e.target.value)}
            placeholder="Email " className="input input-bordered w-full max-w-xs my-2" />
 
           <input type="text"  value={password} onChange={(e)=>setPassword(e.target.value)}
