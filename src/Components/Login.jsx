@@ -41,7 +41,7 @@ const Login = () => {
        try {
         console.log("Login clicked");
         
-           const res = await axios.post("http://localhost:8100/login",{emailId,password},
+           const res = await axios.post(BASE_URL+"/login",{emailId,password},
             {withCredentials:true}
            );
           //  console.log(res.data);
