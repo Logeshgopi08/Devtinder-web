@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addConnectionData } from "../utlis/connectionSlice";
 import UserContainer from "./UserContainer";
+import { Link } from "react-router-dom";
 
 const Connection = ()=>{
    
@@ -37,7 +38,7 @@ const Connection = ()=>{
     return (
         <div>
            {connectionData.map((r)=>{
-            return <UserContainer key={r._id} data={r}/>
+            return <Link to={"/chat/"+r._id} key={r._id} ><UserContainer  data={r}/> </Link> 
            })}
         </div>
     );
